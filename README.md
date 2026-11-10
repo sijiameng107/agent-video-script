@@ -12,7 +12,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/evaluate.py --mode mock --output examples/mock-validation
 ```
 
-Mock 为脚本化测试替身，只证明流程和工程约束。当前离线验收 11/11，测试方法 12 项通过；五项真实验收已有三项通过，normal 和 overlong 待补测。 [证据索引](docs/03-evaluation.md)。
+Mock 为脚本化测试替身，只证明流程和工程约束。当前离线验收 11/11，测试方法 12 项通过；五项必验均有通过记录，覆盖三个真实验收批次。 [证据索引](docs/03-evaluation.md)。
 
 ## 智谱普通 API
 

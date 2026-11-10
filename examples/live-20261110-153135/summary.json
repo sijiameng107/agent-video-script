@@ -1,0 +1,32 @@
+{
+  "mode": "live",
+  "expected": 2,
+  "executed": 2,
+  "passed": 2,
+  "cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "duration": true,
+        "rules": true,
+        "source_ids": true,
+        "scene_sum": true
+      }
+    },
+    {
+      "case": "overlong",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "duration": true,
+        "rules": true,
+        "source_ids": true,
+        "scene_sum": true,
+        "observed_overlong": true,
+        "rechecked_revision": true
+      }
+    }
+  ]
+}

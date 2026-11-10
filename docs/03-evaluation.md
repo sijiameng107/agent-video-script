@@ -32,3 +32,19 @@
 ## 2026-11-10 第三轮真实验收
 
 [原始报告](../examples/live-20261110-152533/REPORT.md)。no_materials 和 tool_failure 通过。normal 在检索后返回无效 JSON，overlong 估出 38 秒后返回无效 JSON，两项未完成。missing_input 的通过记录见第二轮。补测版本提供短参数的 compose_from_source 工具，由模型选已检索素材和停留时间，代码组装初稿，仍由模型发起时长和规则检查。此修改尚待真实补测。
+
+## 2026-11-10 最终补测
+
+[补测报告](../examples/live-20261110-153135/REPORT.md)。normal 和 overlong 均通过。结合前三项的原始通过记录，五项必验全部有通过证据。报告跨批次汇总，原有失败记录保留。
+
+| 必验项 | 通过证据 |
+|---|---|
+| 正常生成 | [normal](../examples/live-20261110-153135/normal/output.json) |
+| 缺关键信息 | [missing_input](../examples/live-20261110-150614/missing_input/output.json)，本地输入校验 |
+| 无素材 | [no_materials](../examples/live-20261110-152533/no_materials/output.json) |
+| 工具失败 | [tool_failure](../examples/live-20261110-152533/tool_failure/output.json) |
+| 超时长修正 | [overlong](../examples/live-20261110-153135/overlong/output.json) |
+
+normal 检索后由模型选择素材及停留时间，生成 2.5 秒草稿并通过检查。overlong 首次估算为 38 秒，超过 30 秒上限，模型选择重新组装草稿，随后对新版本重新执行规则与时长检查，最终为 2.5 秒。时长是粗估，验收条件为不超过目标上限。
+
+终端脚本打印报告位置前误用了 zsh 只读变量 status。Python 已先写出两项原始报告和 Trace，故本轮结果有效。脚本变量已更名。

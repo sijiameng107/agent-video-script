@@ -1,0 +1,328 @@
+{
+  "status": "completed",
+  "reason": "validated_script",
+  "script": {
+    "title": "字幕功能演示",
+    "scenes": [
+      {
+        "visual": "展示字幕功能界面",
+        "narration": "支持字幕。",
+        "source_ids": [
+          "P01"
+        ],
+        "pause_seconds": 0
+      },
+      {
+        "visual": "展示素材来源编号",
+        "narration": "查看功能说明。",
+        "source_ids": [
+          "P01"
+        ],
+        "pause_seconds": 0
+      }
+    ]
+  },
+  "duration": {
+    "draft_id": "72f6ab0b1139945e210fbbab368c8dfa826920c082840441609492d871c367af",
+    "scene_seconds": [
+      1.0,
+      1.5
+    ],
+    "total_seconds": 2.5,
+    "target_seconds": 30,
+    "within_limit": true,
+    "excess_seconds": 0
+  },
+  "source_ids": [
+    "P01"
+  ],
+  "risks": [],
+  "gaps": [],
+  "timestamp": "2026-11-10T07:31:47.717999+00:00",
+  "model_mode": "live",
+  "model": "glm-4-flash-250414",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 5,
+  "state": {
+    "searches": [
+      {
+        "query": "字幕功能演示 简洁客观 短视频平台 视频创作者",
+        "ids": [
+          "P01"
+        ]
+      }
+    ],
+    "materials": {
+      "P01": {
+        "id": "P01",
+        "version_date": "2026-05-01",
+        "keywords": [
+          "字幕",
+          "subtitle",
+          "caption"
+        ],
+        "facts": [
+          "支持字幕"
+        ],
+        "visuals": [
+          "展示字幕功能界面"
+        ]
+      }
+    },
+    "draft": {
+      "title": "字幕功能演示",
+      "scenes": [
+        {
+          "visual": "展示字幕功能界面",
+          "narration": "支持字幕。",
+          "source_ids": [
+            "P01"
+          ],
+          "pause_seconds": 0
+        },
+        {
+          "visual": "展示素材来源编号",
+          "narration": "查看功能说明。",
+          "source_ids": [
+            "P01"
+          ],
+          "pause_seconds": 0
+        }
+      ]
+    },
+    "draft_id": "72f6ab0b1139945e210fbbab368c8dfa826920c082840441609492d871c367af",
+    "revisions": [
+      {
+        "draft_id": "72f6ab0b1139945e210fbbab368c8dfa826920c082840441609492d871c367af",
+        "draft": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 0
+            },
+            {
+              "visual": "展示素材来源编号",
+              "narration": "查看功能说明。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 0
+            }
+          ]
+        }
+      }
+    ],
+    "duration": {
+      "draft_id": "72f6ab0b1139945e210fbbab368c8dfa826920c082840441609492d871c367af",
+      "scene_seconds": [
+        1.0,
+        1.5
+      ],
+      "total_seconds": 2.5,
+      "target_seconds": 30,
+      "within_limit": true,
+      "excess_seconds": 0
+    },
+    "rules": {
+      "draft_id": "72f6ab0b1139945e210fbbab368c8dfa826920c082840441609492d871c367af",
+      "passed": true,
+      "risks": [],
+      "source_ids": [
+        "P01"
+      ]
+    },
+    "errors": []
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_materials",
+      "arguments": {
+        "query": "字幕功能演示 简洁客观 短视频平台 视频创作者"
+      },
+      "observation": {
+        "materials": [
+          {
+            "id": "P01",
+            "version_date": "2026-05-01",
+            "keywords": [
+              "字幕",
+              "subtitle",
+              "caption"
+            ],
+            "facts": [
+              "支持字幕"
+            ],
+            "visuals": [
+              "展示字幕功能界面"
+            ]
+          }
+        ],
+        "neutral_phrases": [
+          "查看功能说明",
+          "了解更多"
+        ],
+        "rules": {
+          "blocked_terms": [
+            "效率提升80%",
+            "效率提升 80%",
+            "绝对",
+            "保证效果"
+          ]
+        },
+        "seconds_per_character": 0.25
+      },
+      "decision_summary": "Search for relevant materials on subtitle features for video creators on short video platforms.",
+      "model_response": {
+        "response_id": "202611101531358fdfa81767f84e56",
+        "usage": {
+          "completion_tokens": 54,
+          "prompt_tokens": 535,
+          "total_tokens": 589
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "compose_from_source"
+    },
+    {
+      "step": 2,
+      "action": "compose_from_source",
+      "arguments": {
+        "source_id": "P01",
+        "pause_seconds": 0
+      },
+      "observation": {
+        "draft_id": "72f6ab0b1139945e210fbbab368c8dfa826920c082840441609492d871c367af",
+        "stored": true,
+        "checks_invalidated": true,
+        "message": "Draft stored only; run duration and rules checks before finish."
+      },
+      "decision_summary": "Use the retrieved material with no pauses.",
+      "model_response": {
+        "response_id": "20261110153138cfca7477f3e04a4a",
+        "usage": {
+          "completion_tokens": 42,
+          "prompt_tokens": 781,
+          "total_tokens": 823
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "estimate_duration"
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "arguments": {},
+      "observation": {
+        "draft_id": "72f6ab0b1139945e210fbbab368c8dfa826920c082840441609492d871c367af",
+        "scene_seconds": [
+          1.0,
+          1.5
+        ],
+        "total_seconds": 2.5,
+        "target_seconds": 30,
+        "within_limit": true,
+        "excess_seconds": 0
+      },
+      "decision_summary": "Estimate the duration of the composed draft.",
+      "model_response": {
+        "response_id": "2026111015314068d533bf552241cd",
+        "usage": {
+          "completion_tokens": 28,
+          "prompt_tokens": 1161,
+          "total_tokens": 1189
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "check_rules"
+    },
+    {
+      "step": 4,
+      "action": "check_rules",
+      "arguments": {},
+      "observation": {
+        "draft_id": "72f6ab0b1139945e210fbbab368c8dfa826920c082840441609492d871c367af",
+        "passed": true,
+        "risks": [],
+        "source_ids": [
+          "P01"
+        ]
+      },
+      "decision_summary": "Check if the composed draft adheres to the rules.",
+      "model_response": {
+        "response_id": "2026111015314200568daa5b1c4e89",
+        "usage": {
+          "completion_tokens": 30,
+          "prompt_tokens": 1379,
+          "total_tokens": 1409
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "finish"
+    },
+    {
+      "step": 5,
+      "action": "finish",
+      "arguments": {},
+      "observation": {
+        "finished": true,
+        "status": "completed",
+        "reason": "validated_script",
+        "script": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 0
+            },
+            {
+              "visual": "展示素材来源编号",
+              "narration": "查看功能说明。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 0
+            }
+          ]
+        },
+        "duration": {
+          "draft_id": "72f6ab0b1139945e210fbbab368c8dfa826920c082840441609492d871c367af",
+          "scene_seconds": [
+            1.0,
+            1.5
+          ],
+          "total_seconds": 2.5,
+          "target_seconds": 30,
+          "within_limit": true,
+          "excess_seconds": 0
+        },
+        "source_ids": [
+          "P01"
+        ],
+        "risks": [],
+        "gaps": []
+      },
+      "decision_summary": "The composed draft meets the duration and rules requirements and is ready to be finished.",
+      "model_response": {
+        "response_id": "20261110153146ad93ad7e7c524fe6",
+        "usage": {
+          "completion_tokens": 38,
+          "prompt_tokens": 1549,
+          "total_tokens": 1587
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "stop:completed"
+    }
+  ]
+}

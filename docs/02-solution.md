@@ -1,6 +1,8 @@
 # 设计
 
-模型自主选择 search_materials、propose_script、estimate_duration、check_rules、finish 或 request_information。每一步执行工具并把真实结果回传模型。无结果可改写查询或澄清；超时长/风险应修改并重新提交，之后再次执行两项检查。
+模型自主选择 search_materials、compose_from_source、estimate_duration、check_rules、finish 或 request_information。每一步执行工具并把真实结果回传模型。无结果可改写查询或澄清；超时长/风险应修改并重新提交，之后再次执行两项检查。
+
+compose_from_source 接收已检索的素材 ID 和每镜停留时间，通过批准的事实和文案组装草稿。完整草稿接口仍可接受 propose_script。
 
 每份草稿有内容哈希 draft_id；每次修改清空历史检查，避免拿旧稿检查结果为新稿背书。finish 仅接受当前哈希的两项通过结果。每个分镜携带检索过的素材 ID，旁白按句只能使用素材原文事实或中性语句，画面及标题也使用允许列表，用户主题中的夸张结论不作为证据。
 

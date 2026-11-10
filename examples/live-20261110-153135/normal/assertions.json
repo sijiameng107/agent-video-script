@@ -1,0 +1,7 @@
+{
+  "status": true,
+  "duration": true,
+  "rules": true,
+  "source_ids": true,
+  "scene_sum": true
+}
