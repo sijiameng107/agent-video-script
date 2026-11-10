@@ -1,0 +1,372 @@
+{
+  "status": "completed",
+  "reason": "validated_script",
+  "script": {
+    "title": "字幕功能演示",
+    "scenes": [
+      {
+        "visual": "展示字幕功能界面",
+        "narration": "支持字幕。",
+        "source_ids": [
+          "P01"
+        ],
+        "pause_seconds": 2.75
+      },
+      {
+        "visual": "展示素材来源编号",
+        "narration": "查看功能说明。",
+        "source_ids": [
+          "P01"
+        ],
+        "pause_seconds": 2.75
+      }
+    ]
+  },
+  "duration": {
+    "draft_id": "02eab07c9ded33c7f680a816554d28b60d23afdb4f263f3ccb5f1e2cc954c454",
+    "scene_seconds": [
+      3.75,
+      4.25
+    ],
+    "total_seconds": 8.0,
+    "target_seconds": 10,
+    "within_limit": true,
+    "excess_seconds": 0
+  },
+  "source_ids": [
+    "P01"
+  ],
+  "risks": [],
+  "gaps": [],
+  "timestamp": "2026-11-10T06:05:58.849676+00:00",
+  "model_mode": "mock",
+  "model": "scripted-test-double",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 7,
+  "state": {
+    "searches": [
+      {
+        "query": "字幕功能演示",
+        "ids": [
+          "P01"
+        ]
+      }
+    ],
+    "materials": {
+      "P01": {
+        "id": "P01",
+        "version_date": "2026-05-01",
+        "keywords": [
+          "字幕",
+          "subtitle",
+          "caption"
+        ],
+        "facts": [
+          "支持字幕"
+        ],
+        "visuals": [
+          "展示字幕功能界面"
+        ]
+      }
+    },
+    "draft": {
+      "title": "字幕功能演示",
+      "scenes": [
+        {
+          "visual": "展示字幕功能界面",
+          "narration": "支持字幕。",
+          "source_ids": [
+            "P01"
+          ],
+          "pause_seconds": 2.75
+        },
+        {
+          "visual": "展示素材来源编号",
+          "narration": "查看功能说明。",
+          "source_ids": [
+            "P01"
+          ],
+          "pause_seconds": 2.75
+        }
+      ]
+    },
+    "draft_id": "02eab07c9ded33c7f680a816554d28b60d23afdb4f263f3ccb5f1e2cc954c454",
+    "revisions": [
+      {
+        "draft_id": "13e86230c0d388b1ef0477e99ca7d74035f7e1781b07d6c6d45342a914c0213f",
+        "draft": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 18
+            },
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 18
+            }
+          ]
+        }
+      },
+      {
+        "draft_id": "02eab07c9ded33c7f680a816554d28b60d23afdb4f263f3ccb5f1e2cc954c454",
+        "draft": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 2.75
+            },
+            {
+              "visual": "展示素材来源编号",
+              "narration": "查看功能说明。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 2.75
+            }
+          ]
+        }
+      }
+    ],
+    "duration": {
+      "draft_id": "02eab07c9ded33c7f680a816554d28b60d23afdb4f263f3ccb5f1e2cc954c454",
+      "scene_seconds": [
+        3.75,
+        4.25
+      ],
+      "total_seconds": 8.0,
+      "target_seconds": 10,
+      "within_limit": true,
+      "excess_seconds": 0
+    },
+    "rules": {
+      "draft_id": "02eab07c9ded33c7f680a816554d28b60d23afdb4f263f3ccb5f1e2cc954c454",
+      "passed": true,
+      "risks": [],
+      "source_ids": [
+        "P01"
+      ]
+    },
+    "errors": [],
+    "initial_draft_validation": {
+      "draft_id": "13e86230c0d388b1ef0477e99ca7d74035f7e1781b07d6c6d45342a914c0213f",
+      "stored": true,
+      "checks_invalidated": true,
+      "message": "Draft stored only; run duration and rules checks before finish."
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_materials",
+      "arguments": {
+        "query": "字幕功能演示"
+      },
+      "observation": {
+        "materials": [
+          {
+            "id": "P01",
+            "version_date": "2026-05-01",
+            "keywords": [
+              "字幕",
+              "subtitle",
+              "caption"
+            ],
+            "facts": [
+              "支持字幕"
+            ],
+            "visuals": [
+              "展示字幕功能界面"
+            ]
+          }
+        ],
+        "neutral_phrases": [
+          "查看功能说明",
+          "了解更多"
+        ],
+        "rules": {
+          "blocked_terms": [
+            "效率提升80%",
+            "效率提升 80%",
+            "绝对",
+            "保证效果"
+          ]
+        },
+        "seconds_per_character": 0.25
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "estimate_duration"
+    },
+    {
+      "step": 2,
+      "action": "estimate_duration",
+      "arguments": {},
+      "observation": {
+        "draft_id": "13e86230c0d388b1ef0477e99ca7d74035f7e1781b07d6c6d45342a914c0213f",
+        "scene_seconds": [
+          19.0,
+          19.0
+        ],
+        "total_seconds": 38.0,
+        "target_seconds": 10,
+        "within_limit": false,
+        "excess_seconds": 28.0
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "check_rules"
+    },
+    {
+      "step": 3,
+      "action": "check_rules",
+      "arguments": {},
+      "observation": {
+        "draft_id": "13e86230c0d388b1ef0477e99ca7d74035f7e1781b07d6c6d45342a914c0213f",
+        "passed": true,
+        "risks": [],
+        "source_ids": [
+          "P01"
+        ]
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "propose_script"
+    },
+    {
+      "step": 4,
+      "action": "propose_script",
+      "arguments": {
+        "draft": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 2.75
+            },
+            {
+              "visual": "展示素材来源编号",
+              "narration": "查看功能说明。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 2.75
+            }
+          ]
+        }
+      },
+      "observation": {
+        "draft_id": "02eab07c9ded33c7f680a816554d28b60d23afdb4f263f3ccb5f1e2cc954c454",
+        "stored": true,
+        "checks_invalidated": true,
+        "message": "Draft stored only; run duration and rules checks before finish."
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "estimate_duration"
+    },
+    {
+      "step": 5,
+      "action": "estimate_duration",
+      "arguments": {},
+      "observation": {
+        "draft_id": "02eab07c9ded33c7f680a816554d28b60d23afdb4f263f3ccb5f1e2cc954c454",
+        "scene_seconds": [
+          3.75,
+          4.25
+        ],
+        "total_seconds": 8.0,
+        "target_seconds": 10,
+        "within_limit": true,
+        "excess_seconds": 0
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "check_rules"
+    },
+    {
+      "step": 6,
+      "action": "check_rules",
+      "arguments": {},
+      "observation": {
+        "draft_id": "02eab07c9ded33c7f680a816554d28b60d23afdb4f263f3ccb5f1e2cc954c454",
+        "passed": true,
+        "risks": [],
+        "source_ids": [
+          "P01"
+        ]
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "finish"
+    },
+    {
+      "step": 7,
+      "action": "finish",
+      "arguments": {},
+      "observation": {
+        "finished": true,
+        "status": "completed",
+        "reason": "validated_script",
+        "script": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 2.75
+            },
+            {
+              "visual": "展示素材来源编号",
+              "narration": "查看功能说明。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 2.75
+            }
+          ]
+        },
+        "duration": {
+          "draft_id": "02eab07c9ded33c7f680a816554d28b60d23afdb4f263f3ccb5f1e2cc954c454",
+          "scene_seconds": [
+            3.75,
+            4.25
+          ],
+          "total_seconds": 8.0,
+          "target_seconds": 10,
+          "within_limit": true,
+          "excess_seconds": 0
+        },
+        "source_ids": [
+          "P01"
+        ],
+        "risks": [],
+        "gaps": []
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "stop:completed"
+    }
+  ]
+}

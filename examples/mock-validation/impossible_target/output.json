@@ -1,0 +1,269 @@
+{
+  "status": "needs_information",
+  "reason": "最小事实脚本仍无法满足时长，请调整目标。",
+  "script": {
+    "title": "字幕功能演示",
+    "scenes": [
+      {
+        "visual": "展示字幕功能界面",
+        "narration": "支持字幕。",
+        "source_ids": [
+          "P01"
+        ],
+        "pause_seconds": 0
+      }
+    ]
+  },
+  "duration": {
+    "draft_id": "a1014f134893ba1d1538738e16405357a47b18c1fe99416dc0e9c22c297bc5bc",
+    "scene_seconds": [
+      1.0
+    ],
+    "total_seconds": 1.0,
+    "target_seconds": 0.1,
+    "within_limit": false,
+    "excess_seconds": 0.9
+  },
+  "source_ids": [
+    "P01"
+  ],
+  "risks": [],
+  "gaps": [
+    "constraints_unresolved"
+  ],
+  "timestamp": "2026-11-10T06:05:58.850278+00:00",
+  "model_mode": "mock",
+  "model": "scripted-test-double",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 5,
+  "state": {
+    "searches": [
+      {
+        "query": "字幕功能演示",
+        "ids": [
+          "P01"
+        ]
+      }
+    ],
+    "materials": {
+      "P01": {
+        "id": "P01",
+        "version_date": "2026-05-01",
+        "keywords": [
+          "字幕",
+          "subtitle",
+          "caption"
+        ],
+        "facts": [
+          "支持字幕"
+        ],
+        "visuals": [
+          "展示字幕功能界面"
+        ]
+      }
+    },
+    "draft": {
+      "title": "字幕功能演示",
+      "scenes": [
+        {
+          "visual": "展示字幕功能界面",
+          "narration": "支持字幕。",
+          "source_ids": [
+            "P01"
+          ],
+          "pause_seconds": 0
+        }
+      ]
+    },
+    "draft_id": "a1014f134893ba1d1538738e16405357a47b18c1fe99416dc0e9c22c297bc5bc",
+    "revisions": [
+      {
+        "draft_id": "a1014f134893ba1d1538738e16405357a47b18c1fe99416dc0e9c22c297bc5bc",
+        "draft": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 0
+            }
+          ]
+        }
+      }
+    ],
+    "duration": {
+      "draft_id": "a1014f134893ba1d1538738e16405357a47b18c1fe99416dc0e9c22c297bc5bc",
+      "scene_seconds": [
+        1.0
+      ],
+      "total_seconds": 1.0,
+      "target_seconds": 0.1,
+      "within_limit": false,
+      "excess_seconds": 0.9
+    },
+    "rules": {
+      "draft_id": "a1014f134893ba1d1538738e16405357a47b18c1fe99416dc0e9c22c297bc5bc",
+      "passed": true,
+      "risks": [],
+      "source_ids": [
+        "P01"
+      ]
+    },
+    "errors": []
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_materials",
+      "arguments": {
+        "query": "字幕功能演示"
+      },
+      "observation": {
+        "materials": [
+          {
+            "id": "P01",
+            "version_date": "2026-05-01",
+            "keywords": [
+              "字幕",
+              "subtitle",
+              "caption"
+            ],
+            "facts": [
+              "支持字幕"
+            ],
+            "visuals": [
+              "展示字幕功能界面"
+            ]
+          }
+        ],
+        "neutral_phrases": [
+          "查看功能说明",
+          "了解更多"
+        ],
+        "rules": {
+          "blocked_terms": [
+            "效率提升80%",
+            "效率提升 80%",
+            "绝对",
+            "保证效果"
+          ]
+        },
+        "seconds_per_character": 0.25
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "propose_script"
+    },
+    {
+      "step": 2,
+      "action": "propose_script",
+      "arguments": {
+        "draft": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 0
+            }
+          ]
+        }
+      },
+      "observation": {
+        "draft_id": "a1014f134893ba1d1538738e16405357a47b18c1fe99416dc0e9c22c297bc5bc",
+        "stored": true,
+        "checks_invalidated": true,
+        "message": "Draft stored only; run duration and rules checks before finish."
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "estimate_duration"
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "arguments": {},
+      "observation": {
+        "draft_id": "a1014f134893ba1d1538738e16405357a47b18c1fe99416dc0e9c22c297bc5bc",
+        "scene_seconds": [
+          1.0
+        ],
+        "total_seconds": 1.0,
+        "target_seconds": 0.1,
+        "within_limit": false,
+        "excess_seconds": 0.9
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "check_rules"
+    },
+    {
+      "step": 4,
+      "action": "check_rules",
+      "arguments": {},
+      "observation": {
+        "draft_id": "a1014f134893ba1d1538738e16405357a47b18c1fe99416dc0e9c22c297bc5bc",
+        "passed": true,
+        "risks": [],
+        "source_ids": [
+          "P01"
+        ]
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "request_information"
+    },
+    {
+      "step": 5,
+      "action": "request_information",
+      "arguments": {
+        "reason": "最小事实脚本仍无法满足时长，请调整目标。"
+      },
+      "observation": {
+        "finished": true,
+        "status": "needs_information",
+        "reason": "最小事实脚本仍无法满足时长，请调整目标。",
+        "script": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 0
+            }
+          ]
+        },
+        "duration": {
+          "draft_id": "a1014f134893ba1d1538738e16405357a47b18c1fe99416dc0e9c22c297bc5bc",
+          "scene_seconds": [
+            1.0
+          ],
+          "total_seconds": 1.0,
+          "target_seconds": 0.1,
+          "within_limit": false,
+          "excess_seconds": 0.9
+        },
+        "source_ids": [
+          "P01"
+        ],
+        "risks": [],
+        "gaps": [
+          "constraints_unresolved"
+        ]
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "stop:needs_information"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "status": "needs_information",
+  "reason": "业务工具不可用，不能声称脚本已验证。",
+  "script": null,
+  "duration": null,
+  "source_ids": [],
+  "risks": [],
+  "gaps": [
+    "tool_failure"
+  ],
+  "timestamp": "2026-11-10T06:05:58.848044+00:00",
+  "model_mode": "mock",
+  "model": "scripted-test-double",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 2,
+  "state": {
+    "searches": [],
+    "materials": {},
+    "draft": null,
+    "draft_id": null,
+    "revisions": [],
+    "duration": null,
+    "rules": null,
+    "errors": [
+      {
+        "error": "tool_failure",
+        "tool": "search_materials",
+        "retryable": false
+      }
+    ]
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_materials",
+      "arguments": {
+        "query": "字幕功能演示"
+      },
+      "observation": {
+        "error": "tool_failure",
+        "tool": "search_materials",
+        "retryable": false
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "request_information"
+    },
+    {
+      "step": 2,
+      "action": "request_information",
+      "arguments": {
+        "reason": "业务工具不可用，不能声称脚本已验证。"
+      },
+      "observation": {
+        "finished": true,
+        "status": "needs_information",
+        "reason": "业务工具不可用，不能声称脚本已验证。",
+        "script": null,
+        "duration": null,
+        "source_ids": [],
+        "risks": [],
+        "gaps": [
+          "tool_failure"
+        ]
+      },
+      "decision_summary": "Offline scripted policy, not model decision evidence.",
+      "model_response": {},
+      "next_action": "stop:needs_information"
+    }
+  ]
+}

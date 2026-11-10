@@ -1,0 +1,40 @@
+{
+  "materials": [
+    {
+      "id": "P01",
+      "version_date": "2026-05-01",
+      "keywords": [
+        "字幕",
+        "subtitle",
+        "caption"
+      ],
+      "facts": [
+        "支持字幕导出"
+      ],
+      "visuals": [
+        "展示字幕功能界面"
+      ]
+    }
+  ],
+  "characters_per_second": 4,
+  "neutral_titles": [
+    "字幕功能演示",
+    "产品功能演示"
+  ],
+  "neutral_phrases": [
+    "查看功能说明",
+    "了解更多"
+  ],
+  "neutral_visuals": [
+    "展示标题文字",
+    "展示素材来源编号"
+  ],
+  "rules": {
+    "blocked_terms": [
+      "效率提升80%",
+      "效率提升 80%",
+      "绝对",
+      "保证效果"
+    ]
+  }
+}

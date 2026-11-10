@@ -1,0 +1,120 @@
+{
+  "mode": "mock",
+  "expected": 11,
+  "executed": 11,
+  "passed": 11,
+  "cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "duration": true,
+        "rules": true,
+        "source_ids": true,
+        "scene_sum": true
+      }
+    },
+    {
+      "case": "missing_input",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "not_claimed_success": true
+      }
+    },
+    {
+      "case": "no_materials",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "not_claimed_success": true
+      }
+    },
+    {
+      "case": "tool_failure",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "not_claimed_success": true
+      }
+    },
+    {
+      "case": "overlong",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "duration": true,
+        "rules": true,
+        "source_ids": true,
+        "scene_sum": true,
+        "observed_overlong": true,
+        "rechecked_revision": true
+      }
+    },
+    {
+      "case": "unsupported_claim",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "duration": true,
+        "rules": true,
+        "source_ids": true,
+        "scene_sum": true,
+        "removed_claim": true
+      }
+    },
+    {
+      "case": "shorter_target",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "duration": true,
+        "rules": true,
+        "source_ids": true,
+        "scene_sum": true,
+        "observed_overlong": true,
+        "rechecked_revision": true
+      }
+    },
+    {
+      "case": "impossible_target",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "not_claimed_success": true
+      }
+    },
+    {
+      "case": "estimate_failure",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "not_claimed_success": true
+      }
+    },
+    {
+      "case": "transient_failure",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "duration": true,
+        "rules": true,
+        "source_ids": true,
+        "scene_sum": true
+      }
+    },
+    {
+      "case": "replaced_material",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "duration": true,
+        "rules": true,
+        "source_ids": true,
+        "scene_sum": true,
+        "updated_fact": true
+      }
+    }
+  ]
+}

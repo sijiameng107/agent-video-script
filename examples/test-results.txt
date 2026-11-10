@@ -1,0 +1,17 @@
+test_acceptance_cases (test_agent.Tests.test_acceptance_cases) ... ok
+test_bad_target (test_agent.Tests.test_bad_target) ... ok
+test_fake_source (test_agent.Tests.test_fake_source) ... ok
+test_initial_38_revised_28 (test_agent.Tests.test_initial_38_revised_28) ... ok
+test_limits (test_agent.Tests.test_limits) ... ok
+test_long_script_cannot_finish (test_agent.Tests.test_long_script_cannot_finish) ... ok
+test_no_false_finish (test_agent.Tests.test_no_false_finish) ... ok
+test_revision_invalidates_checks (test_agent.Tests.test_revision_invalidates_checks) ... ok
+test_sum_duration (test_agent.Tests.test_sum_duration) ... ok
+test_unsupported_numeric_claim (test_agent.Tests.test_unsupported_numeric_claim) ... ok
+test_user_title_is_not_evidence (test_agent.Tests.test_user_title_is_not_evidence) ... ok
+test_visual_claim_blocked (test_agent.Tests.test_visual_claim_blocked) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.003s
+
+OK

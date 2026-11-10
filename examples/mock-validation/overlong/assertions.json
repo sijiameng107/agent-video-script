@@ -1,0 +1,9 @@
+{
+  "status": true,
+  "duration": true,
+  "rules": true,
+  "source_ids": true,
+  "scene_sum": true,
+  "observed_overlong": true,
+  "rechecked_revision": true
+}
