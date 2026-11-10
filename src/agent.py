@@ -19,7 +19,7 @@ class Tools:
         if request.get('initial_draft') is not None:
             result=self.propose_script(request['initial_draft']);self.state['initial_draft_validation']=result
     def call(self,action,args):
-        schema={'search_materials':{'query'},'propose_script':{'draft'},'estimate_duration':set(),'check_rules':set(),'finish':set(),'request_information':{'reason'}}
+        schema={'search_materials':{'query'},'propose_script':{'draft'},'compose_from_source':{'source_id','pause_seconds'},'estimate_duration':set(),'check_rules':set(),'finish':set(),'request_information':{'reason'}}
         # The live model sometimes sends the draft directly as the arguments object.
         if action == 'propose_script' and set(args) == {'title', 'scenes'}:
             args = {'draft': args}
@@ -35,6 +35,14 @@ class Tools:
         self.state['searches'].append({'query':query,'ids':[m['id'] for m in found]})
         self.state['materials'].update({m['id']:m for m in found})
         return {'materials':found,'neutral_phrases':self.catalog['neutral_phrases'],'rules':self.catalog['rules'],'seconds_per_character':1/self.catalog['characters_per_second']}
+    def compose_from_source(self, source_id, pause_seconds):
+        if not isinstance(source_id, str) or source_id not in self.state['materials']:
+            return {'error': 'unretrieved_source', 'available_ids': list(self.state['materials'])}
+        draft = basic_draft(self.catalog, self.state['materials'][source_id], self.request['target_seconds'])
+        for scene in draft['scenes']:
+            scene['pause_seconds'] = pause_seconds
+        return self.propose_script(draft)
+
     def propose_script(self,draft):
         if not isinstance(draft,dict) or set(draft)!={'title','scenes'} or not isinstance(draft['title'],str) or not isinstance(draft['scenes'],list) or not 1<=len(draft['scenes'])<=12:return {'error':'invalid_draft'}
         for scene in draft['scenes']:

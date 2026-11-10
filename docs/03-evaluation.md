@@ -28,3 +28,7 @@
 [原始报告](../examples/live-20261110-150614/REPORT.md)。missing_input 通过，由本地输入校验拦截。normal 检索成功后，模型重复提交不符合工具参数结构的草稿，达到执行上限。no_materials 的模型响应无法解析。tool_failure 和 overlong 未执行。当前没有成功生成脚本的真实模型 Trace。
 
 第三轮补测前修改：工具接受本轮模型实际发送的扁平草稿参数，进入同一套草稿、素材和时长校验。用 normal Trace 中的原始参数离线复现，草稿成功保存并通过检查。模型提示增加草稿格式和无素材时的动作示例。单个响应格式错误会记录后继续验收。真实补测待执行。
+
+## 2026-11-10 第三轮真实验收
+
+[原始报告](../examples/live-20261110-152533/REPORT.md)。no_materials 和 tool_failure 通过。normal 在检索后返回无效 JSON，overlong 估出 38 秒后返回无效 JSON，两项未完成。missing_input 的通过记录见第二轮。补测版本提供短参数的 compose_from_source 工具，由模型选已检索素材和停留时间，代码组装初稿，仍由模型发起时长和规则检查。此修改尚待真实补测。

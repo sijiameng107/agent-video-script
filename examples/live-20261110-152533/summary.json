@@ -1,0 +1,48 @@
+{
+  "mode": "live",
+  "expected": 4,
+  "executed": 4,
+  "passed": 2,
+  "cases": [
+    {
+      "case": "normal",
+      "passed": false,
+      "checks": {
+        "status": false,
+        "duration": false,
+        "rules": false,
+        "source_ids": false,
+        "scene_sum": false
+      }
+    },
+    {
+      "case": "no_materials",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "not_claimed_success": true
+      }
+    },
+    {
+      "case": "tool_failure",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "not_claimed_success": true
+      }
+    },
+    {
+      "case": "overlong",
+      "passed": false,
+      "checks": {
+        "status": false,
+        "duration": false,
+        "rules": false,
+        "source_ids": false,
+        "scene_sum": false,
+        "observed_overlong": true,
+        "rechecked_revision": false
+      }
+    }
+  ]
+}

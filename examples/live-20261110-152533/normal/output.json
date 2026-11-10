@@ -1,0 +1,111 @@
+{
+  "status": "incomplete",
+  "reason": "model_error",
+  "gaps": [
+    "model_error"
+  ],
+  "timestamp": "2026-11-10T07:26:20.070142+00:00",
+  "model_mode": "live",
+  "model": "glm-4-flash-250414",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 2,
+  "state": {
+    "searches": [
+      {
+        "query": "字幕功能演示",
+        "ids": [
+          "P01"
+        ]
+      }
+    ],
+    "materials": {
+      "P01": {
+        "id": "P01",
+        "version_date": "2026-05-01",
+        "keywords": [
+          "字幕",
+          "subtitle",
+          "caption"
+        ],
+        "facts": [
+          "支持字幕"
+        ],
+        "visuals": [
+          "展示字幕功能界面"
+        ]
+      }
+    },
+    "draft": null,
+    "draft_id": null,
+    "revisions": [],
+    "duration": null,
+    "rules": null,
+    "errors": []
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_materials",
+      "arguments": {
+        "query": "字幕功能演示"
+      },
+      "observation": {
+        "materials": [
+          {
+            "id": "P01",
+            "version_date": "2026-05-01",
+            "keywords": [
+              "字幕",
+              "subtitle",
+              "caption"
+            ],
+            "facts": [
+              "支持字幕"
+            ],
+            "visuals": [
+              "展示字幕功能界面"
+            ]
+          }
+        ],
+        "neutral_phrases": [
+          "查看功能说明",
+          "了解更多"
+        ],
+        "rules": {
+          "blocked_terms": [
+            "效率提升80%",
+            "效率提升 80%",
+            "绝对",
+            "保证效果"
+          ]
+        },
+        "seconds_per_character": 0.25
+      },
+      "decision_summary": "先检索用户主题",
+      "model_response": {
+        "response_id": "202611101526135a81c38f32bf4aa6",
+        "usage": {
+          "completion_tokens": 29,
+          "prompt_tokens": 799,
+          "total_tokens": 828
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "model_error"
+    },
+    {
+      "step": 2,
+      "action": "model_error",
+      "arguments": {},
+      "observation": {
+        "error": "invalid_model_response",
+        "message": "Expected a complete JSON decision object; no tool was executed.",
+        "finish_reason": "stop",
+        "detail": "invalid_json"
+      },
+      "decision_summary": "No valid decision.",
+      "next_action": "stop:incomplete"
+    }
+  ]
+}

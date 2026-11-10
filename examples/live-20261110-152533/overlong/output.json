@@ -1,0 +1,126 @@
+{
+  "status": "incomplete",
+  "reason": "model_error",
+  "gaps": [
+    "model_error"
+  ],
+  "timestamp": "2026-11-10T07:26:52.635953+00:00",
+  "model_mode": "live",
+  "model": "glm-4-flash-250414",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 2,
+  "state": {
+    "searches": [],
+    "materials": {},
+    "draft": {
+      "title": "字幕功能演示",
+      "scenes": [
+        {
+          "visual": "展示字幕功能界面",
+          "narration": "支持字幕。",
+          "source_ids": [
+            "P01"
+          ],
+          "pause_seconds": 18
+        },
+        {
+          "visual": "展示字幕功能界面",
+          "narration": "支持字幕。",
+          "source_ids": [
+            "P01"
+          ],
+          "pause_seconds": 18
+        }
+      ]
+    },
+    "draft_id": "13e86230c0d388b1ef0477e99ca7d74035f7e1781b07d6c6d45342a914c0213f",
+    "revisions": [
+      {
+        "draft_id": "13e86230c0d388b1ef0477e99ca7d74035f7e1781b07d6c6d45342a914c0213f",
+        "draft": {
+          "title": "字幕功能演示",
+          "scenes": [
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 18
+            },
+            {
+              "visual": "展示字幕功能界面",
+              "narration": "支持字幕。",
+              "source_ids": [
+                "P01"
+              ],
+              "pause_seconds": 18
+            }
+          ]
+        }
+      }
+    ],
+    "duration": {
+      "draft_id": "13e86230c0d388b1ef0477e99ca7d74035f7e1781b07d6c6d45342a914c0213f",
+      "scene_seconds": [
+        19.0,
+        19.0
+      ],
+      "total_seconds": 38.0,
+      "target_seconds": 30,
+      "within_limit": false,
+      "excess_seconds": 8.0
+    },
+    "rules": null,
+    "errors": [],
+    "initial_draft_validation": {
+      "draft_id": "13e86230c0d388b1ef0477e99ca7d74035f7e1781b07d6c6d45342a914c0213f",
+      "stored": true,
+      "checks_invalidated": true,
+      "message": "Draft stored only; run duration and rules checks before finish."
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "estimate_duration",
+      "arguments": {},
+      "observation": {
+        "draft_id": "13e86230c0d388b1ef0477e99ca7d74035f7e1781b07d6c6d45342a914c0213f",
+        "scene_seconds": [
+          19.0,
+          19.0
+        ],
+        "total_seconds": 38.0,
+        "target_seconds": 30,
+        "within_limit": false,
+        "excess_seconds": 8.0
+      },
+      "decision_summary": "估算当前草稿的时长",
+      "model_response": {
+        "response_id": "202611101526449f0e067ec34f4835",
+        "usage": {
+          "completion_tokens": 26,
+          "prompt_tokens": 1231,
+          "total_tokens": 1257
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "model_error"
+    },
+    {
+      "step": 2,
+      "action": "model_error",
+      "arguments": {},
+      "observation": {
+        "error": "invalid_model_response",
+        "message": "Expected a complete JSON decision object; no tool was executed.",
+        "finish_reason": "stop",
+        "detail": "invalid_json"
+      },
+      "decision_summary": "No valid decision.",
+      "next_action": "stop:incomplete"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "status": "needs_information",
+  "reason": "请提供主题相关素材",
+  "script": null,
+  "duration": null,
+  "source_ids": [],
+  "risks": [],
+  "gaps": [
+    "tool_failure"
+  ],
+  "timestamp": "2026-11-10T07:26:44.237966+00:00",
+  "model_mode": "live",
+  "model": "glm-4-flash-250414",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 2,
+  "state": {
+    "searches": [],
+    "materials": {},
+    "draft": null,
+    "draft_id": null,
+    "revisions": [],
+    "duration": null,
+    "rules": null,
+    "errors": [
+      {
+        "error": "tool_failure",
+        "tool": "search_materials",
+        "retryable": false
+      }
+    ]
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_materials",
+      "arguments": {
+        "query": "字幕功能演示"
+      },
+      "observation": {
+        "error": "tool_failure",
+        "tool": "search_materials",
+        "retryable": false
+      },
+      "decision_summary": "先检索用户主题",
+      "model_response": {
+        "response_id": "20261110152641d24b4e5a68fb4a38",
+        "usage": {
+          "completion_tokens": 29,
+          "prompt_tokens": 799,
+          "total_tokens": 828
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "request_information"
+    },
+    {
+      "step": 2,
+      "action": "request_information",
+      "arguments": {
+        "reason": "请提供主题相关素材"
+      },
+      "observation": {
+        "finished": true,
+        "status": "needs_information",
+        "reason": "请提供主题相关素材",
+        "script": null,
+        "duration": null,
+        "source_ids": [],
+        "risks": [],
+        "gaps": [
+          "tool_failure"
+        ]
+      },
+      "decision_summary": "检索后没有相关素材",
+      "model_response": {
+        "response_id": "20261110152643e314208356c74957",
+        "usage": {
+          "completion_tokens": 33,
+          "prompt_tokens": 879,
+          "total_tokens": 912
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "stop:needs_information"
+    }
+  ]
+}
