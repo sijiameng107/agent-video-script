@@ -1,0 +1,10 @@
+{
+  "status": "needs_information",
+  "reason": "missing_input",
+  "gaps": [
+    "audience"
+  ],
+  "script": null,
+  "trace": [],
+  "model_mode": "live"
+}

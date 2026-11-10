@@ -1,0 +1,35 @@
+{
+  "mode": "live",
+  "expected": 5,
+  "executed": 3,
+  "passed": 1,
+  "cases": [
+    {
+      "case": "normal",
+      "passed": false,
+      "checks": {
+        "status": false,
+        "duration": false,
+        "rules": false,
+        "source_ids": false,
+        "scene_sum": false
+      }
+    },
+    {
+      "case": "missing_input",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "not_claimed_success": true
+      }
+    },
+    {
+      "case": "no_materials",
+      "passed": false,
+      "checks": {
+        "status": false,
+        "not_claimed_success": true
+      }
+    }
+  ]
+}
