@@ -20,7 +20,11 @@ class Tools:
             result=self.propose_script(request['initial_draft']);self.state['initial_draft_validation']=result
     def call(self,action,args):
         schema={'search_materials':{'query'},'propose_script':{'draft'},'estimate_duration':set(),'check_rules':set(),'finish':set(),'request_information':{'reason'}}
-        if action not in schema or set(args)!=schema[action]:return {'error':'invalid_tool_or_arguments'}
+        # The live model sometimes sends the draft directly as the arguments object.
+        if action == 'propose_script' and set(args) == {'title', 'scenes'}:
+            args = {'draft': args}
+        if action not in schema or set(args) != schema[action]:
+            return {'error': 'invalid_tool_or_arguments', 'expected_keys': sorted(schema.get(action, []))}
         if action in ('search_materials','request_information') and not isinstance(args[next(iter(args))],str):return {'error':'invalid_arguments'}
         failed=(self.failure=='search_always' and action=='search_materials') or (self.failure=='estimate_once' and action=='estimate_duration' and not self.failed) or (self.failure=='estimate_always' and action=='estimate_duration')
         if failed:
