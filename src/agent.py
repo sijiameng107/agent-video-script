@@ -119,9 +119,10 @@ def run(request,catalog,model,max_steps=14,failure='none'):
     if error:return {'status':'needs_information','reason':error['error'],'gaps':error.get('missing',[error['error']]),'script':None,'trace':[],'model_mode':model.mode}
     if max_steps<1:raise ValueError('max_steps must be positive')
     tools=Tools(request,catalog,failure);trace=[];final={'status':'incomplete','reason':'limit_reached','gaps':['execution_limit']}
+    writing_rules = {key: value for key, value in catalog.items() if key != 'materials'}
     for step in range(1,max_steps+1):
         try:
-            d=model.decide({'request':request,'state':copy.deepcopy(tools.state),'catalog':catalog},trace)
+            d=model.decide({'request':request,'state':copy.deepcopy(tools.state),'catalog':writing_rules},trace)
             if not isinstance(d,dict) or not isinstance(d.get('action'),str) or not isinstance(d.get('arguments'),dict) or not isinstance(d.get('decision_summary'),str) or not d['decision_summary'].strip():raise ValueError('invalid_decision')
         except Exception as e:
             trace.append({'step':step,'action':'model_error','arguments':{},'observation':getattr(e,'details',{'error':type(e).__name__}),'decision_summary':'No valid decision.'});final.update(reason='model_error',gaps=['model_error']);break
